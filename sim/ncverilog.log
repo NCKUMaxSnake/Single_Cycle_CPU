@@ -1,0 +1,142 @@
+ncverilog(64): 14.10-s005: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
+TOOL:	ncverilog	14.10-s005: Started on Apr 13, 2021 at 21:17:27 CST
+ncverilog
+	-f prev.f
+		top_tb.v
+		../src/top.v
+		../src/CPU.v
+		../src/SRAM.v
+		+nc64bit
+		+access+r
+file: top_tb.v
+      $fscanf(gf, "%h\n", GOLDEN[num]);
+            |
+ncvlog: *W,NOSYST (top_tb.v,49|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+file: ../src/top.v
+	module worklib.top:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ALU:v <0x43839b8f>
+			streams:   6, words:  2314
+		worklib.ALUCtrl:v <0x1ec0c031>
+			streams:   1, words:  3068
+		worklib.BranchCtrl:v <0x17bb67d5>
+			streams:   1, words:  1299
+		worklib.CPU:v <0x0f10707a>
+			streams:  18, words:  5107
+		worklib.Decoder:v <0x7d901090>
+			streams:   1, words: 10674
+		worklib.ImmGen:v <0x055526fd>
+			streams:   1, words:  1695
+		worklib.PC:v <0x14323882>
+			streams:   3, words:  1000
+		worklib.Register:v <0x366ebad2>
+			streams:   7, words: 10423
+		worklib.SRAM:v <0x029ee691>
+			streams:   8, words:  4821
+		worklib.top:v <0x54c447f4>
+			streams:   4, words:   587
+		worklib.top_tb:v <0x1aeafcc0>
+			streams:   9, words: 22706
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 12      11
+		Registers:               42      37
+		Scalar wires:            11       -
+		Vectored wires:          41       -
+		Always blocks:           19      17
+		Initial blocks:           3       3
+		Cont. assignments:       17      17
+		Pseudo assignments:      12      12
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.top_tb:v
+Loading snapshot worklib.top_tb:v .................... Done
+*Verdi* Loading libsscore_ius141.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux x86_64/64bit, 08/30/2018
+(C) 1996 - 2018 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
+*Verdi* : Enable +struct and +mda dumping.
+*Verdi* : End of traversing.
+
+Done
+
+DM[   0] = fffffff0, pass
+DM[   1] = fffffff8, pass
+DM[   2] = 00000008, pass
+DM[   3] = 00000001, pass
+DM[   4] = 00000001, pass
+DM[   5] = 78787878, pass
+DM[   6] = 000091a2, pass
+DM[   7] = 00000003, pass
+DM[   8] = fefcfefd, pass
+DM[   9] = 10305070, pass
+DM[  10] = cccccccc, pass
+DM[  11] = ffffffcc, pass
+DM[  12] = ffffcccc, pass
+DM[  13] = 000000cc, pass
+DM[  14] = 0000cccc, pass
+DM[  15] = 00000d9d, pass
+DM[  16] = 00000004, pass
+DM[  17] = 00000003, pass
+DM[  18] = 000001a6, pass
+DM[  19] = 00000ec6, pass
+DM[  20] = 2468b7a8, pass
+DM[  21] = 5dbf9f00, pass
+DM[  22] = 00012b38, pass
+DM[  23] = fa2817b7, pass
+DM[  24] = ff000000, pass
+DM[  25] = 12345678, pass
+DM[  26] = 0000f000, pass
+DM[  27] = 00000f00, pass
+DM[  28] = 000000f0, pass
+DM[  29] = 0000000f, pass
+DM[  30] = 56780000, pass
+DM[  31] = 78000000, pass
+DM[  32] = 00005678, pass
+DM[  33] = 00000078, pass
+DM[  34] = 12345678, pass
+DM[  35] = ce780000, pass
+DM[  36] = fffff000, pass
+DM[  37] = fffff000, pass
+DM[  38] = fffff000, pass
+DM[  39] = fffff000, pass
+DM[  40] = fffff000, pass
+DM[  41] = fffff000, pass
+DM[  42] = 1357a064, pass
+DM[  43] = 13578000, pass
+DM[  44] = fffff004, pass
+DM[  45] = 000174a8, pass
+DM[  46] = fffffb37, pass
+DM[  47] = 00007740, pass
+DM[  48] = 00005af3, pass
+DM[  49] = ffffff17, pass
+DM[  50] = 000000e8, pass
+DM[  51] = 00005af3, pass
+DM[  52] = 000f405f, pass
+DM[  53] = ffe17e1e, pass
+
+
+
+
+        ****************************               
+        **                        **       |__||  
+        **  Congratulations !!    **      / O.O  | 
+        **                        **    /_____   | 
+        **  Simulation PASS!!     **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        ****************************   \m___m__|_|
+
+
+total cycle:     15263
+Simulation complete via $finish(1) at time 152640 NS + 0
+./top_tb.v:68             $finish;
+ncsim> exit
+TOOL:	ncverilog	14.10-s005: Exiting on Apr 13, 2021 at 21:17:30 CST  (total: 00:00:03)

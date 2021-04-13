@@ -1,0 +1,33 @@
+Warning: Design 'top' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : top
+Version: Q-2019.12
+Date   : Tue Apr 13 22:06:08 2021
+****************************************
+
+Library(s) Used:
+
+    No libraries used.
+
+Number of ports:                            2
+Number of nets:                           133
+Number of cells:                            4
+Number of combinational cells:              0
+Number of sequential cells:                 3
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                       2
+
+Combinational area:                  0.000000
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:            7980.039307
+
+Total cell area:                     0.000000
+Total area:                       7980.039307
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1
